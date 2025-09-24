@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Blog
+  jpa:
+    properties:
+      hibernate:
+        # 对表名/列名统一加引号，避免关键字冲突（H2 必开，PostgreSQL/Oracle 建议开）
+        globally_quoted_identifiers: true
+        # 建表时列定义不加引号，避免部分数据库方言不兼容
+        globally_quoted_identifiers_skip_column_definitions: true
